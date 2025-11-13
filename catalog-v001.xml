@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/electrochemistry/electrochemicalquantities" uri="file:/C:/GitRepositories/domain-electrochemistry/reference/electrochemistry-quantities.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/batteryquantities" uri="file:/C:/GitRepositories/domain-battery/reference/battery-quantities.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/0.18.6-beta/modules/battery-testing" uri="file:/C:/GitRepositories/domain-battery/modules/battery-testing.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/0.18.6-beta/modules/battery-manufacturing" uri="file:/C:/GitRepositories/domain-battery/modules/battery-manufacturing.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/0.18.6-beta/modules/battery-cell-geometry" uri="file:/C:/GitRepositories/domain-battery/modules/battery-cell-geometry.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/0.18.6-beta/reference/battery-quantities" uri="file:/C:/GitRepositories/domain-battery/reference/battery-quantities.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/emmo/domain/battery/0.18.6-beta/reference/battery-reference" uri="file:/C:/GitRepositories/domain-battery/reference/battery-reference.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1710872843811" name="http://emmo.info/emmo/application/bto" uri="documentation/ontology.owl"/>
     </group>

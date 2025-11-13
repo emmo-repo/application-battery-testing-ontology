@@ -15,14 +15,14 @@
 @base <http://w3id.org/emmo-bto/bto> .
 
 <http://w3id.org/emmo-bto/bto> rdf:type owl:Ontology ;
-	owl:versionIRI <http://w3id.org/emmo-bto/1.0.2/bto> ;
+	owl:versionIRI <http://w3id.org/emmo-bto/1.0.0-beta1/bto> ;
 	owl:imports 
 		<https://w3id.org/emmo/domain/characterisation-methodology/chameo> ,
-		<https://w3id.org/emmo/1.0.2/reference/symbolic> ,
+		<https://w3id.org/emmo/1.0.0-beta5/multiperspective/symbolic> ,
 		<https://w3id.org/emmo/domain/battery/battery> ,
-		<https://w3id.org/emmo/domain/battery/reference/battery-quantities> ,
+		<https://w3id.org/emmo/domain/battery/batteryquantities> ,
 		<https://w3id.org/emmo/domain/electrochemistry/electrochemistry> ,
-		<https://w3id.org/emmo/domain/electrochemistry/reference/electrochemistry-quantities> ;
+		<https://w3id.org/emmo/domain/electrochemistry/electrochemicalquantities> ;
 	          # Already imported by CHAMEO:
 	          # <http://w3id.org/emmo/mereocausality> ,
 	          # <http://w3id.org/emmo/disciplines/metrology> ,
@@ -77,77 +77,77 @@
 	rdfs:comment "" .
 		
 ####### EMMO classes and properties (with mapping):
-### Component                -> multiperspective-persholistic        EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817
-### Height                   -> disciplines-isq                      EMMO_08bcf1d6_e719_46c8_bb21_24bc9bf34dba
-### Length                   -> disciplines-isq                      EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac
-### LengthUnit               -> disciplines-units-sidimensionalunits EMMO_b3600e73_3e05_479d_9714_c041c3acf5cc
-### MeasurementUnit          -> disciplines-metrology                EMMO_b081b346_7279_46ef_9a3d_2c088fcd79f4
-### Property                 -> perspectives-semiotics               EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba
-### Width                    -> disciplines-isq                      EMMO_e4de48b1_dabb_4490_ac2b_040f926c64f0
+### Component                -> multiperspective-persholistic        Component
+### Height                   -> disciplines-isq                      Height
+### Length                   -> disciplines-isq                      Length
+### LengthUnit               -> disciplines-units-sidimensionalunits LengthUnit
+### MeasurementUnit          -> disciplines-metrology                MeasurementUnit
+### Property                 -> perspectives-semiotics               Property
+### Width                    -> disciplines-isq                      Width
 
 emmo:Component a owl:Class ;
-	owl:equivalentClass emmo:EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817 .
+	owl:equivalentClass emmo:Component .
 emmo:Height a owl:Class ;
-	owl:equivalentClass emmo:EMMO_08bcf1d6_e719_46c8_bb21_24bc9bf34dba .
+	owl:equivalentClass emmo:Height .
 emmo:Length a owl:Class ;
-	owl:equivalentClass emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac .
+	owl:equivalentClass emmo:Length .
 emmo:LengthUnit a owl:Class ;
-	owl:equivalentClass emmo:EMMO_b3600e73_3e05_479d_9714_c041c3acf5cc .
+	owl:equivalentClass emmo:LengthUnit .
 emmo:Manufacturing a owl:Class ;
-	owl:equivalentClass emmo:EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b .
+	owl:equivalentClass emmo:Manufacturer .
 emmo:MeasurementUnit a owl:Class ;
-	owl:equivalentClass emmo:EMMO_b081b346_7279_46ef_9a3d_2c088fcd79f4 .
+	owl:equivalentClass emmo:MeasurementUnit .
 emmo:Property a owl:Class ;
-	owl:equivalentClass emmo:EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba .
+	owl:equivalentClass emmo:Property .
 emmo:Width a owl:Class ;
-	owl:equivalentClass emmo:EMMO_e4de48b1_dabb_4490_ac2b_040f926c64f0 .
+	owl:equivalentClass emmo:Width .
 
-### hasBeginTask             -> multiperspective-workflow            EMMO_4ab7fb52_cec3_4c00_90c0_5648f01e3296
-### hasDataValue             -> perspectives-data                    EMMO_b6292331_94af_4f00_976b_ea55960c2f1c
-### hasEndTask               -> multiperspective-workflow            EMMO_92227f7f_22e9_4b19_a011_920eac3c7b75
-### hasInput                 -> multiperspective-persholistic        EMMO_36e69413_8c59_4799_946c_10b05d266e22
-### hasMeasurementUnit       -> disciplines-metrology                EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569
-### hasNext                  -> mereocausality                       EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d
-### hasNumericalValue        -> disciplines-math                     EMMO_faf79f53_749d_40b2_807c_d34244c192f4
-### hasOutput                -> multiperspective-persholistic        EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840
-### hasProperty              -> perspectives-semiotics               EMMO_e1097637_70d2_4895_973f_2396f04fa204
-### hasProperPart            -> mereocausality                       EMMO_9380ab64_0363_4804_b13f_3a8a94119a76
-### hasReferenceUnit         -> disciplines-metrology                EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296
-### hasStringValue           -> multiperspective-symbolic            EMMO_02face50_43a1_40ce_a909_dfe54d5e186b
-### hasTask                  -> multiperspective-workflow            EMMO_70da982d_1810_4b01_9630_a28e216ecd9a
-### hasTemporaryParticipant  -> multiperspective-persholistic        EMMO_35c29eb6_f57e_48d8_85af_854f9e926e77
-### hasUriValue              -> disciplines-computerscience          EMMO_b35e92d7_7fa0_4661_aa5a_5cea7c8e6925
+### hasBeginTask             -> multiperspective-workflow            hasBeginTask
+### hasDataValue             -> perspectives-data                    hasDataValue
+### hasEndTask               -> multiperspective-workflow            hasEndTask
+### hasInput                 -> multiperspective-persholistic        hasInput
+### hasMeasurementUnit       -> disciplines-metrology                hasMeasurementUnit
+### hasNext                  -> mereocausality                       precedes
+### hasNumericalValue        -> disciplines-math                     hasNumberValue
+### hasOutput                -> multiperspective-persholistic        hasOutput
+### hasProperty              -> perspectives-semiotics               hasProperty
+### hasProperPart            -> mereocausality                       hasProperPart
+### hasReferenceUnit         -> disciplines-metrology                hasMetrologicalReference
+### hasStringValue           -> multiperspective-symbolic            hasStringValue
+### hasTask                  -> multiperspective-workflow            hasTask
+### hasTemporaryParticipant  -> multiperspective-persholistic        isParticipatedBy
+### hasUriValue              -> disciplines-computerscience          hasURIValue
 
 emmo:hasBeginTask a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_4ab7fb52_cec3_4c00_90c0_5648f01e3296 .
+	owl:equivalentProperty emmo:hasBeginTask .
 emmo:hasDataValue a owl:DatatypeProperty ;
-	owl:equivalentProperty emmo:EMMO_b6292331_94af_4f00_976b_ea55960c2f1c .
+	owl:equivalentProperty emmo:hasDataValue .
 emmo:hasEndTask a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_92227f7f_22e9_4b19_a011_920eac3c7b75 .
+	owl:equivalentProperty emmo:hasEndTask .
 emmo:hasInput a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 .
+	owl:equivalentProperty emmo:hasInput .
 emmo:hasMeasurementUnit a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 .
+	owl:equivalentProperty emmo:hasMeasurementUnit .
 emmo:hasNext a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d .
+	owl:equivalentProperty emmo:precedes .
 emmo:hasNumericalValue a owl:DatatypeProperty ;
-	owl:equivalentProperty emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 .
+	owl:equivalentProperty emmo:hasNumberValue .
 emmo:hasOutput a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 .
+	owl:equivalentProperty emmo:hasOutput .
 emmo:hasProperty a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_e1097637_70d2_4895_973f_2396f04fa204 .
+	owl:equivalentProperty emmo:hasProperty .
 emmo:hasProperPart a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_9380ab64_0363_4804_b13f_3a8a94119a76 .
+	owl:equivalentProperty emmo:hasProperPart .
 emmo:hasReferenceUnit a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296 .
+	owl:equivalentProperty emmo:hasMetrologicalReference .
 emmo:hasStringValue a owl:DatatypeProperty ;
-	owl:equivalentProperty emmo:EMMO_02face50_43a1_40ce_a909_dfe54d5e186b .
+	owl:equivalentProperty emmo:hasStringValue .
 emmo:hasTask a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_70da982d_1810_4b01_9630_a28e216ecd9a .
+	owl:equivalentProperty emmo:hasTask .
 emmo:hasTemporaryParticipant a owl:ObjectProperty ;
-	owl:equivalentProperty emmo:EMMO_35c29eb6_f57e_48d8_85af_854f9e926e77 .
+	owl:equivalentProperty emmo:isParticipatedBy .
 emmo:hasUriValue a owl:DatatypeProperty ;
-	owl:equivalentProperty emmo:EMMO_b35e92d7_7fa0_4661_aa5a_5cea7c8e6925 .
+	owl:equivalentProperty emmo:hasURIValue .
 
 ####### CHAMEO classes and properties:
 ### CharacterisationEnvironment
@@ -213,14 +213,6 @@ bto:btoObjectProperty a owl:ObjectProperty ;
 	rdfs:label "btoObjectProperty"@en ;
 	skos:prefLabel "btoObjectProperty"@en ;
 	rdfs:comment "This is the root object property of the BTO ontology, introduced for grouping all of BTO's object properties under a single parent object property."@en .
-
-bto:hasAccuracy a owl:ObjectProperty ;
-	rdfs:label "hasAccuracy"@en ;
-	skos:prefLabel "hasAccuracy"@en ;
-	rdfs:comment "Object property that connects a battery measurement process with its accuracy."@en ;
-	rdfs:domain bto:BatteryMeasurementProcess ;
-	rdfs:range bto:Accuracy ;
-	rdfs:subPropertyOf bto:btoObjectProperty .
 
 bto:hasBatteryCharacterizationHardwareSpecification a owl:ObjectProperty ;
 	rdfs:label "hasBatteryCharacterizationHardwareSpecification"@en ;
@@ -576,9 +568,9 @@ bto:BatteryMeasurementProcess a owl:Class ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                   owl:onClass bto:EndTime ] ,
                 [ rdf:type owl:Restriction ;
-                  owl:onProperty bto:hasAccuracy ;
+                  owl:onProperty chameo:hasAccuracy ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                  owl:onClass bto:Accuracy ] ,
+                  owl:onClass chameo:Accuracy ] ,
                 [ rdf:type owl:Restriction ;
                   owl:onProperty chameo:hasLab ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -796,3 +788,83 @@ bto:VoltageSpecification a owl:Class ;
 	rdfs:subClassOf bto:BatteryCharacterizationHardwareSpecification .	
 
 # ---------------------------------------------------------------------------
+#########################################
+### Equivalent classes and properties ###
+#########################################
+
+### Classes:
+### emmo:Component                                       -> reference-persholistic              EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817
+emmo:Component a owl:Class ;
+	owl:equivalentClass emmo:EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817 .
+### emmo:Height                                          -> disciplines-isq                     EMMO_08bcf1d6_e719_46c8_bb21_24bc9bf34dba
+emmo:Height a owl:Class ;
+	owl:equivalentClass emmo:EMMO_08bcf1d6_e719_46c8_bb21_24bc9bf34dba .
+### emmo:Length                                          -> disciplines-isq                     EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac
+emmo:Length a owl:Class ;
+	owl:equivalentClass emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac .
+### emmo:LengthUnit                                      -> units-sidimensionalunits            EMMO_b3600e73_3e05_479d_9714_c041c3acf5cc
+emmo:LengthUnit a owl:Class ;
+	owl:equivalentClass emmo:EMMO_b3600e73_3e05_479d_9714_c041c3acf5cc .
+### emmo:Manufacturer                                    -> disciplines-manufacturing           EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b
+emmo:Manufacturer a owl:Class ;
+	owl:equivalentClass emmo:EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b .
+### emmo:MeasurementUnit                                 -> disciplines-metrology               EMMO_b081b346_7279_46ef_9a3d_2c088fcd79f4
+emmo:MeasurementUnit a owl:Class ;
+	owl:equivalentClass emmo:EMMO_b081b346_7279_46ef_9a3d_2c088fcd79f4 .
+### emmo:Property                                        -> perspectives-semiotics              EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba
+emmo:Property a owl:Class ;
+	owl:equivalentClass emmo:EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba .
+### emmo:Width                                           -> disciplines-isq                     EMMO_e4de48b1_dabb_4490_ac2b_040f926c64f0
+emmo:Width a owl:Class ;
+	owl:equivalentClass emmo:EMMO_e4de48b1_dabb_4490_ac2b_040f926c64f0 .
+
+### ObjectProperties:
+### emmo:hasBeginTask                                    -> reference-workflow                  EMMO_4ab7fb52_cec3_4c00_90c0_5648f01e3296
+emmo:hasBeginTask a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_4ab7fb52_cec3_4c00_90c0_5648f01e3296 .
+### emmo:hasEndTask                                      -> reference-workflow                  EMMO_92227f7f_22e9_4b19_a011_920eac3c7b75
+emmo:hasEndTask a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_92227f7f_22e9_4b19_a011_920eac3c7b75 .
+### emmo:hasInput                                        -> perspectives-persistence            EMMO_36e69413_8c59_4799_946c_10b05d266e22
+emmo:hasInput a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 .
+### emmo:hasMeasurementUnit                              -> disciplines-metrology               EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569
+emmo:hasMeasurementUnit a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569 .
+### emmo:hasMetrologicalReference                        -> disciplines-metrology               EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296
+emmo:hasMetrologicalReference a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296 .
+### emmo:hasOutput                                       -> perspectives-persistence            EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840
+emmo:hasOutput a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 .
+### emmo:hasProperPart                                   -> mereocausality-mereocausality       EMMO_9380ab64_0363_4804_b13f_3a8a94119a76
+emmo:hasProperPart a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_9380ab64_0363_4804_b13f_3a8a94119a76 .
+### emmo:hasProperty                                     -> perspectives-semiotics              EMMO_e1097637_70d2_4895_973f_2396f04fa204
+emmo:hasProperty a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_e1097637_70d2_4895_973f_2396f04fa204 .
+### emmo:hasTask                                         -> reference-workflow                  EMMO_70da982d_1810_4b01_9630_a28e216ecd9a
+emmo:hasTask a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_70da982d_1810_4b01_9630_a28e216ecd9a .
+### emmo:isParticipatedBy                                -> perspectives-persistence            EMMO_35c29eb6_f57e_48d8_85af_854f9e926e77
+emmo:isParticipatedBy a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_35c29eb6_f57e_48d8_85af_854f9e926e77 .
+### emmo:precedes                                        -> mereocausality-mereocausality       EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d
+emmo:precedes a owl:ObjectProperty ;
+	owl:equivalentProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d .
+
+### DatatypeProperties:
+### emmo:hasDataValue                                    -> reference-symbolic                  EMMO_b6292331_94af_4f00_976b_ea55960c2f1c
+emmo:hasDataValue a owl:DatatypeProperty ;
+	owl:equivalentProperty emmo:EMMO_b6292331_94af_4f00_976b_ea55960c2f1c .
+### emmo:hasNumberValue                                  -> disciplines-math                    EMMO_faf79f53_749d_40b2_807c_d34244c192f4
+emmo:hasNumberValue a owl:DatatypeProperty ;
+	owl:equivalentProperty emmo:EMMO_faf79f53_749d_40b2_807c_d34244c192f4 .
+### emmo:hasStringValue                                  -> reference-symbolic                  EMMO_02face50_43a1_40ce_a909_dfe54d5e186b
+emmo:hasStringValue a owl:DatatypeProperty ;
+	owl:equivalentProperty emmo:EMMO_02face50_43a1_40ce_a909_dfe54d5e186b .
+### emmo:hasURIValue                                     -> disciplines-computerscience         EMMO_b35e92d7_7fa0_4661_aa5a_5cea7c8e6925
+emmo:hasURIValue a owl:DatatypeProperty ;
+	owl:equivalentProperty emmo:EMMO_b35e92d7_7fa0_4661_aa5a_5cea7c8e6925 .
+
+### AnnotationProperties:
