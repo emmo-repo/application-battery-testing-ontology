@@ -93,7 +93,7 @@ emmo:Length a owl:Class ;
 	owl:equivalentClass emmo:EMMO_cd2cd0de_e0cc_4ef1_b27e_2e88db027bac .
 emmo:LengthUnit a owl:Class ;
 	owl:equivalentClass emmo:EMMO_b3600e73_3e05_479d_9714_c041c3acf5cc .
-emmo:Manufacturing a owl:Class ;
+emmo:Manufacturer a owl:Class ;
 	owl:equivalentClass emmo:EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b .
 emmo:MeasurementUnit a owl:Class ;
 	owl:equivalentClass emmo:EMMO_b081b346_7279_46ef_9a3d_2c088fcd79f4 .
@@ -151,10 +151,11 @@ emmo:hasUriValue a owl:DatatypeProperty ;
 
 ####### CHAMEO classes and properties:
 ### CharacterisationEnvironment
-### CharacterisationInstrument
+### CharacterisationMeasurementInstrument
 ### CharacterisationMeasurementProcess
-### CharacterisationMethod
+### CharacterisationTechnique
 ### Holder
+### Laboratory
 ### MeasurementParameter
 ### RawData
 ### ReferenceSample
@@ -166,7 +167,7 @@ emmo:hasUriValue a owl:DatatypeProperty ;
 ### hasCharacterisationLocation
 ### hasDataset
 ### hasHardwareSpecification
-### hasLab
+### hasLaboratory
 ### hasMeasurementParameter
 ### hasMeasurementSample
 
@@ -453,7 +454,7 @@ bto:BatteryCharacterizationHardware a owl:Class ;
 	skos:altLabel "Hardware"@en ;
 	rdfs:comment "The physical apparatus of the battery testing procedure. It is required in a battery measurement process."@en ;
 	rdfs:subClassOf bto:BatteryTestingOntology ;
-	rdfs:subClassOf chameo:CharacterisationInstrument .
+	rdfs:subClassOf chameo:CharacterisationMeasurementInstrument .
 
 bto:BatteryCharacterizationHardwareSpecification a owl:Class ;
 	rdfs:label "BatteryCharacterizationHardwareSpecification"@en ;
@@ -467,9 +468,11 @@ bto:BatteryCharacterizationMethod a owl:Class ;
 	rdfs:label "BatteryCharacterizationMethod"@en ;
 	skos:prefLabel "BatteryCharacterizationMethod"@en ;
 	skos:altLabel "BatteryCharacterisationMethod"@en ;
+	skos:altLabel "BatteryCharacterizationTechnique"@en ;
+	skos:altLabel "BatteryCharacterisationTechnique"@en ;
 	rdfs:comment "The description of the overall characterization method for a battery. It is usually made up of different steps, or tasks (e.g. battery measurement process, battery sample preparation)."@en ;
 	rdfs:subClassOf bto:BatteryTestingOntology ;
-	rdfs:subClassOf chameo:CharacterisationMethod ,
+	rdfs:subClassOf chameo:CharacterisationTechnique ,
 	       [ rdf:type owl:Restriction ;
              owl:onProperty emmo:hasTask ;
              # emmo:hasTask
@@ -580,9 +583,9 @@ bto:BatteryMeasurementProcess a owl:Class ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                   owl:onClass bto:Accuracy ] ,
                 [ rdf:type owl:Restriction ;
-                  owl:onProperty chameo:hasLab ;
+                  owl:onProperty chameo:hasLaboratory ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                  owl:onClass chameo:Lab ] ,
+                  owl:onClass chameo:Laboratory ] ,
                 [ rdf:type owl:Restriction ;
                   owl:onProperty chameo:hasOperator ;
                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
